@@ -2,8 +2,7 @@
 
 class Image
 {
-    public function create_image()
-    {
+    public function create_image(){
         header("Content-Type: image/png");
         $image = @imagecreate(110, 20) or die("Create image was failed");
 

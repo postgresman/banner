@@ -26,8 +26,7 @@ class DB
         }
     }
 
-	public static function get_instance()
-    {
+    public static function get_instance(){
         if (self::$instance != null) {
             return self::$instance;
         }

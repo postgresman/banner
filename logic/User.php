@@ -16,7 +16,7 @@ class User
         $this->params['page_url'] = $url;
     }
 
-    public function ping($db) {
+    public function ping($db){
         if($user = $db->selectFirst($this->table_name, $this->params)){
             if (!$db->update($this->table_name, array(
                 'views_count' => $user['views_count'] + 1,
