@@ -67,7 +67,7 @@ class DB
         return $query->fetchAll(PDO::FETCH_ASSOC);;
     }
 
-    public function selectFirst($table, $params){
+    public function select_first($table, $params){
         return current($this->select($table, $params));
     }
 }

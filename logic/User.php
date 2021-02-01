@@ -17,7 +17,7 @@ class User
     }
 
     public function ping($db){
-        if($user = $db->selectFirst($this->table_name, $this->params)){
+        if($user = $db->select_first($this->table_name, $this->params)){
             if (!$db->update($this->table_name, array(
                 'views_count' => $user['views_count'] + 1,
             ), $user['id']))
